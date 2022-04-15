@@ -67,7 +67,7 @@ $(() => {
  	        }else{
  	        document.querySelector('.container').classList.add('start')
  	        var type = $('#id');
-  	        api = 'https://ipfs.infura.io:5001/api/v0/add?pin=true'
+  	        api = 'https://ipfsapi.glitch.me/api/v0/add?pin=true'
             let formData = new FormData();
             formData.append('file', files[i]);
             let randomClass = Date.now().toString(36);
@@ -143,7 +143,7 @@ $(() => {
                     return xhr;
                 },
                 success: res => {
-                    var imgSrc = 'https://ipfs.fleek.co/ipfs/'+res.Hash
+                    var imgSrc = 'https://ipfs-gw.chjina.com/ipfs/'+res.Hash
                     /* 清除input框 */
                     $('#file').val(null);
                     if (res.code === -1) {
